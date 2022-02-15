@@ -4,7 +4,7 @@
 
 </div>
 
-<h1 align="center">Flowers</h1>
+<h1 align="center">Flower</h1>
 
 <p align="center">
 
