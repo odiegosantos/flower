@@ -1,0 +1,293 @@
+@import url("https://fonts.googleapis.com/css2?family=Italianno&display=swap");
+* {
+  font-family: "Italianno", cursive;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  border-radius: 5px;
+}
+body {
+  background: linear-gradient(#ffc1ba, #fa9084);
+  height: 100%;
+  place-items: center;
+}
+.title {
+  color: #ff1493;
+  border-bottom: 1px solid #fff;
+}
+.title-item {
+  font-size: 15em;
+  text-align: center;
+  letter-spacing: 0.1em;
+  padding: 80px 0 180px 0;
+  text-shadow: 2px 2px 10px #000, -2px -2px 10px #ff1493;
+}
+.flower {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  justify-content: space-around;
+  gap: 20px;
+}
+.flower img {
+  width: 400px;
+  height: 350px;
+  box-shadow: 5px 5px 20px #000;
+}
+.flower img:hover {
+  filter: brightness(120%);
+}
+.flower-1 {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  justify-content: space-around;
+}
+.flower-1 img {
+  width: 600px;
+  height: 400px;
+  box-shadow: 5px 5px 20px #000;
+}
+.flower-1 img:hover {
+  filter: brightness(120%);
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 130px 0 70px 0;
+  width: auto;
+  height: auto;
+}
+.contato {
+  font-size: 3em;
+  color: #ff1493;
+}
+iframe {
+  width: 400px;
+  height: 400px;
+  box-shadow: 2px 2px 10px #000;
+}
+
+.copy {
+  text-align: center;
+  font-size: 2em;
+}
+
+/* MENU */
+a {
+  color: #ff1493;
+  text-decoration: none;
+}
+a:hover {
+  color: green;
+}
+#logo {
+  font-size: 3.5rem;
+  font-weight: bolder;
+}
+#header {
+  box-sizing: border-box;
+  height: 70px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#menu {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+}
+#menu a {
+  font-size: 2em;
+  font-weight: bolder;
+  display: block;
+  padding: 0.5rem;
+}
+
+#btn-mobile {
+  display: none;
+}
+
+@media (max-width: 400px) {
+  .title-item {
+    font-size: 6em;
+    text-shadow: none;
+    padding: 150px 0 180px 0;
+  }
+  .flower-item img {
+    width: 320px;
+    height: 300px;
+  }
+  .contato {
+    font-size: 2.2em;
+    padding: 100px 0 200px 0;
+  }
+  iframe {
+    width: 320px;
+  }
+  #menu {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 70px;
+    right: 0;
+    background: #e7e7e7;
+    transition: 0.6s;
+    z-index: 1000;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+  #nav.active #menu {
+    height: calc(100vh - 70px);
+    visibility: visible;
+    overflow-y: auto;
+  }
+  #menu a {
+    padding: 1rem 0;
+    margin: 0 1rem;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+  }
+  #btn-mobile {
+    display: flex;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+  #hamburger {
+    display: block;
+    width: 20px;
+    border-top: 2px solid;
+  }
+  #hamburger::after,
+  #hamburger::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    margin-top: 5px;
+    position: relative;
+    transition: 0.3s;
+  }
+  #nav.active #hamburger {
+    border-top-color: transparent;
+  }
+  #nav.active #hamburger::before {
+    transform: rotate(135deg);
+  }
+  #nav.active #hamburger::after {
+    transform: rotate(-135deg);
+    top: -7px;
+  }
+}
+/* foto slider */
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 500px;
+  width: 1200px;
+  border: 10px solid #fff;
+  box-shadow: 2px 2px 10px #000;
+}
+.wrapper .images {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+.wrapper .images .img-1 {
+  height: 100%;
+  width: 100%;
+  background: url("../images/flower.jpg") no-repeat;
+  /* background: url("images/car.jpg") no-repeat; */
+}
+.wrapper .images .img-2 {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  filter: sepia(100%);
+  background: url("../images/flower.jpg") no-repeat;
+  /* background: url("images/car.png") no-repeat; */
+}
+.wrapper .slider {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+.wrapper .slider input {
+  width: 100%;
+  background: none;
+  -webkit-appearance: none;
+}
+.slider input::-webkit-slider-thumb {
+  height: 486px;
+  width: 3px;
+  background: none;
+  -webkit-appearance: none;
+  cursor: col-resize;
+}
+.slider .drag-line {
+  width: 3px;
+  height: 486px;
+  position: absolute;
+  left: 49.85%;
+  pointer-events: none;
+}
+.slider .drag-line::before,
+.slider .drag-line::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 222px;
+  background: #fff;
+}
+.slider .drag-line::before {
+  top: 0;
+}
+.slider .drag-line::after {
+  bottom: 0;
+}
+.slider .drag-line span {
+  height: 42px;
+  width: 42px;
+  border: 3px solid #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.slider .drag-line span::before,
+.slider .drag-line span::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  border: 10px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.slider .drag-line span::before {
+  left: 40%;
+  border-left-color: #fff;
+}
+.slider .drag-line span::after {
+  left: 60%;
+  border-top-color: #fff;
+}
