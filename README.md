@@ -24,7 +24,7 @@
 </p>
 
 ## :dart: About ##
-Flora is a simple website developed in html, css and javascript\
+Flower is a simple website developed in html, css and javascript\
 One of my first projects, I like to look at it and see how I\ 
 developed during all this time
 
